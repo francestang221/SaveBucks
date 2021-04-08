@@ -1,3 +1,7 @@
-body {
-    background-color: blanchedalmond;
+#body {
+    background-color: #ffffff;
+}
+
+#header {
+    background-color: #27251F;
 }
