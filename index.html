@@ -11,45 +11,69 @@
    <!-- Our own CSS -->
    <link rel="stylesheet" href="style.css">
 
-    <title>SaveBucks</title>
+    <title>$aveBucks</title>
 </head>
 <body id="body">
 
-    <nav id="header" class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">$aveBucks</a>
-        <a class="navbar-text" href="#">Choose your go-to Starbucks drink, and see how much it is really costing you.</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container">
+    <div class="row">
+    <nav id="header" class="navbar rounded navbar-dark border border-success">
+        <div class="col-md">
+        <a id="title" class="navbar-brand">
+          <img src="Logo.png"  height="100px" alt="">
+        </a>
+      </div>
+      <div class="col-md">
+        <p id="description" class="navbar-text">Choose your go-to Starbucks drink, and see how much it is really costing you.</p>
+      </div>
+      <div class="col-">
+        <button id="toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+      </div>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+              <a id="home" class="nav-link" href="#">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">About <span class="sr-only"></span></a>
+                <a id="about" class="nav-link" href="#">About <span class="sr-only"></span></a>
               </li>
           </ul>
         </div>
       </nav>
+    </div>
+    </div>
 
-
-    <div class="btn-group" class="dropdown">
-        <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg">
+    <div class="row">
+    <div class="btn-group"  class="dropdown">
+        <button type="button" id="button-dropdown" class="btn btn-lg btn-success dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Select Your Go-To Starbucks Order
         </button>
-        <div id="coffee-dropdown" class="dropdown-menu dropdown-menu-right">
+        <div id="dropdown-options" class="dropdown-menu dropdown-menu-right">
           <button class="dropdown-item" type="button">Latte</button>
           <button class="dropdown-item" type="button">Americano</button>
           <button class="dropdown-item" type="button">Macchiatto</button>
           <button class="dropdown-item" type="button">Capuccino</button>
           <button class="dropdown-item" type="button">Frappuccino</button>
         </div>
-      </div>
+    </div>
+    </div>
+      <div class="row">
+      <button type="button" id="button-enter" class="btn btn-lg btn-success">Show me a better way</button>
+    </div>
+    </div>
 
-    <button type="button" id="enter" class="btn btn-success">Show me a better way</button>
+    <div class="col-md">
+      <img id="coffee-image" src="ronaldo-arthur-vidal-Cdz_lvnl37k-unsplash.jpg" alt="Coffee cup from above." class="rounded">
+    </div>
+    </div>
+    </div>
+
 
     <!-- JS script -->
     <script src="script.js"></script>
