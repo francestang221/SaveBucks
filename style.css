@@ -1,35 +1,30 @@
 #body {
     background-color: #F4F3F1;
-    font-family: 'Didot';
+    font-family: Raleway;
 }
 
 #header {
     background-color: #27251F;
-}
-
-#toggler {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-#title {
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 75px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #coffee-image {
-    width:100%;
+    width: 50%;
     margin-bottom: 40px;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 #description {
     font-size: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
+    text-align: center;
 }
 
 #dropdown-options {
@@ -40,19 +35,20 @@
     max-width: 700px;
     margin: 20px;
     align-items:center;
+    margin-right: 0px;
 }
 
 #button-enter {
     max-width: 250px;
     margin: 20px;
-    margin-left: 50px;
-    align-items:center;
+    margin-left: 0px;
 }
 
-.navbar {
-    margin: 15px;
+#title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    width: auto;
 }
 
-.nav-link {
-    margin-left: 20px;
-}
