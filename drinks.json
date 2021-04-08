@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "name":"Latte",
+        "price":"3.65"
+    },
+    {
+        "id":2,
+        "name":"Americano",
+        "price":"2.65"
+    },
+    {
+        "id":3,
+        "name":"Macchiato",
+        "price":"4.45"
+    }
+]
