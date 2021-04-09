@@ -20,41 +20,41 @@
 
 <body id="body">
 
-  <div id="header" class="border-success rounded">
-      <img  id="title" src="Logo.png"  height="200px" alt="SaveBucks">
-  </div>
+  <nav id="header" class="navbar sticky-top fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img id="title" src="Logo.png" alt="SaveBucks">
+    </a>
+  </nav>
+  
+  <div class="main-content">
 
-  <div class="container">   
-    <div class="row">
-      <div class="col">
-        <p id="description" class="navbar-text">Choose your go-to Starbucks drink, and see how much it is really costing you!</p>
+      <p id="description" class="navbar-text">Choose your go-to Starbucks drink, and see how much it is really costing you!</p>
+
+    <div class="row justify-content-center">
+      <div class="col-auto">
+      <div class="btn-group"  class="dropdown">
+        <button type="button" id="button-dropdown" class="btn btn-lg btn-outline-* dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Select Order
+        </button>
+        <div id="dropdown-options" class="dropdown-menu dropdown-menu-right">
+          <button id="latte" class="dropdown-item" type="button">Latte</button>
+          <button id="americano" class="dropdown-item" type="button">Americano</button>
+          <button id="macchiato" class="dropdown-item" type="button">Macchiato</button>
+          <button id="cappuccino" class="dropdown-item" type="button">Cappuccino</button>
+          <button id="frappuccino" class="dropdown-item" type="button">Frappuccino</button>
+        </div>
       </div>
-    </div>
-   
-      <div class="row justify-content-center">
-        <div class="col-auto">
-        <div class="btn-group"  class="dropdown">
-            <button type="button" id="button-dropdown" class="btn btn-lg btn-success dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Select Order
-            </button>
-            <div id="dropdown-options" class="dropdown-menu dropdown-menu-right">
-              <button id="latte" class="dropdown-item" type="button">Latte</button>
-              <button id="americano" class="dropdown-item" type="button">Americano</button>
-              <button id="macchiato" class="dropdown-item" type="button">Macchiato</button>
-              <button id="cappuccino" class="dropdown-item" type="button">Cappuccino</button>
-              <button id="frappuccino" class="dropdown-item" type="button">Frappuccino</button>
-            </div>
-        </div>
-        </div>
-        <div class="col-auto">
-          <button type="button" id="button-enter" class="btn btn-lg btn-success">Show me a better way!</button>
-        </div>
+      </div>
+      <div class="col-auto">
+        <button type="button" id="button-enter" class="btn btn-lg btn-outline-*">Show me a better way!</button>
       </div>
     </div>
 
     <div id="savings">
 
     </div>
+
+  </div>
 
     <img id="coffee-image" src="CoffeeCup.jpg" alt="Coffee cup from above." class="rounded">
 

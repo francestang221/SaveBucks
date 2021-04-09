@@ -34,7 +34,7 @@ drinks.forEach(function(item){
         p2.innerHTML = '';
         // show the requested drink's price
         sb_price = prices.get(coffee);
-        p1.textContent = 'You go-to drink is a ' + coffee + '. ' + 'YUM! \r\n'
+        p1.textContent = 'Your go-to drink is a ' + coffee + '. ' + 'YUM! \r\n'
         p1.textContent += 'The price of a ' + coffee + 'is $'
         p1.textContent += sb_price;
         p1.textContent += '. '
@@ -70,7 +70,7 @@ show.onclick = function () {
     } 
     else {
         p2.innerHTML = '';
-        p2.textContent += 'IF YOU MAKE COFFE AT HOME: \r\n'
+        p2.textContent += 'IF YOU MAKE COFFEE AT HOME: \r\n'
         p2.textContent += 'Ground Coffee: $12 = 80 Cups \r\n'
         p2.textContent += 'Filters: $0.02 \r\n'
         p2.textContent += 'Creamer: $0.03 \r\n'
@@ -80,15 +80,20 @@ show.onclick = function () {
         p2.textContent += '\r\n HOW TO BE A MILLIONAIRE: \r\n'
         // calculate the savings per cup
         const savings_per_cup = (sb_price - 0.20).toFixed(2);
-        p2.textContent += savings_per_cup + ' Savings per Cup \r\n'
+        p2.textContent += '$' + savings_per_cup + ' Savings per Cup \r\n'
         const daily_savings = (3*savings_per_cup).toFixed(2)
-        p2.textContent += savings_per_cup + ' per Cup X 3 = ' + daily_savings + ' per Day \r\n'
+        p2.textContent += '$' + savings_per_cup + ' per Cup X 3 = ' + daily_savings + ' per Day \r\n'
         p2.textContent += 'Invest ' + daily_savings + ' per Day Over 55 Years at 7% Return \r\n'
         console.log(daily_savings)
-        var total_val = calcTotalValue(55, parseInt(daily_savings));
-        // WIP: add comma 
+        var total_val = addCommas(calcTotalValue(55, parseInt(daily_savings)));
         p2.textContent += '= $' + total_val + ' VALUE\r\n'
      }
     // reset the dropdown menu attribute
     clicked = false;
+}
+
+// format number 
+
+function addCommas (number) {
+    return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 }
