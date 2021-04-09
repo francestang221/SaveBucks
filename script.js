@@ -41,6 +41,20 @@ drinks.forEach(function(item){
     }
 });
 
+
+// calculate compound interest 
+function calcTotalValue(year, daily_invest){
+    var total_value = 0;
+    const number_of_days = 365 * year;
+    const apr = 0.07;
+    const daily_gain = 0.07/365;
+    for (let i = 0; i < number_of_days;i++) {
+        total_value += daily_invest;
+        total_value *= (1 + daily_gain);
+    }
+    return total_value.toFixed(2);
+}
+
 // show the potentional savings
 let p2 = document.createElement('p')
 savings.appendChild(p2)
@@ -65,13 +79,15 @@ show.onclick = function () {
 
         p2.textContent += '\r\n HOW TO BE A MILLIONAIRE: \r\n'
         // calculate the savings per cup
-        var savings_per_cup = (sb_price - 0.20).toFixed(2);
+        const savings_per_cup = (sb_price - 0.20).toFixed(2);
         p2.textContent += savings_per_cup + ' Savings per Cup \r\n'
-        var daily_savings = (3*savings_per_cup).toFixed(2)
+        const daily_savings = (3*savings_per_cup).toFixed(2)
         p2.textContent += savings_per_cup + ' per Cup X 3 = ' + daily_savings + ' per Day \r\n'
         p2.textContent += 'Invest ' + daily_savings + ' per Day Over 55 Years at 7% Return \r\n'
-        var total_value = '1,331,086.16'; // WIP: need to calculate using a function
-        p2.textContent += '= $' + total_value + ' VALUE\r\n'
+        console.log(daily_savings)
+        var total_val = calcTotalValue(55, parseInt(daily_savings));
+        // WIP: add comma 
+        p2.textContent += '= $' + total_val + ' VALUE\r\n'
      }
     // reset the dropdown menu attribute
     clicked = false;
