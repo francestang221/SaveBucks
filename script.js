@@ -7,6 +7,15 @@ const frappuccino = document.getElementById('frappuccino')
 
 let drinks = [latte, americano, macchiato, cappuccino, frappuccino];
 
+let prices = new Map();
+prices.set('Latte', '$3.65')
+prices.set('Americano', '$2.65')
+prices.set('Macchiato', '$4.35')
+prices.set('Cappuccino', '$5.25')
+prices.set('Frappuccino', '$5.65')
+
+console.log(prices.get('Latte'));
+
 const savings = document.getElementById('savings');
 let p1 = document.createElement('p')
 savings.appendChild(p1)
@@ -17,13 +26,15 @@ savings.appendChild(p1)
 var clicked = false;
 drinks.forEach(function(item){
     item.onclick = function() {
+        var coffee = item.innerHTML
         clicked = true;
         // clear the last requested information
         p1.innerHTML = '';
         p2.innerHTML = '';
         // show the requested drink's price
-        p1.textContent = "The price of a " + item.innerHTML + " is $"
-        p1.textContent += '3.65';
+        p1.textContent = "The price of a " + coffee + " is "
+        p1.textContent += prices.get(coffee)
+        p1.textContent += ". "
     }
 });
 
