@@ -58,7 +58,7 @@ show.onclick = function () {
         p2.innerHTML = '';
         p2.textContent += 'IF YOU MAKE COFFE AT HOME: \r\n'
         p2.textContent += 'Ground Coffee: $12 = 80 Cups \r\n'
-        p2.textContent += 'Filters: $0.01 \r\n'
+        p2.textContent += 'Filters: $0.02 \r\n'
         p2.textContent += 'Creamer: $0.03 \r\n'
         p2.textContent += 'Total: $10.00 / 50 Cups \r\n'
         p2.textContent += '= $0.20 per Cup \r\n'
