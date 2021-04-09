@@ -35,7 +35,7 @@ drinks.forEach(function(item){
         // show the requested drink's price
         sb_price = prices.get(coffee);
         p1.textContent = 'Your go-to drink is a ' + coffee + '. ' + 'YUM! \r\n'
-        p1.textContent += 'The price of a ' + coffee + 'is $'
+        p1.textContent += 'The price of a ' + coffee + ' is ~$'
         p1.textContent += sb_price;
         p1.textContent += '. '
 
@@ -74,23 +74,23 @@ show.onclick = function () {
     } 
     else {
         p2.innerHTML = '';
-        p2.textContent += 'IF YOU MAKE COFFEE AT HOME: \r\n'
-        p2.textContent += 'Ground Coffee: $12 = 80 Cups \r\n'
+        p2.textContent += 'If you make coffee at home instead: \r\n'
+        p2.textContent += 'Ground Coffee: $12 / 80 cups \r\n'
         p2.textContent += 'Filters: $0.02 \r\n'
         p2.textContent += 'Creamer: $0.03 \r\n'
-        p2.textContent += 'Total: $10.00 / 50 Cups \r\n'
-        p2.textContent += '= $0.20 per Cup \r\n'
+        p2.textContent += 'Total= $10.00 / 50 cups \r\n'
+        p2.textContent += '= $0.20 per cup \r\n'
 
-        p2.textContent += '\r\n HOW TO BE A MILLIONAIRE: \r\n'
+        p2.textContent += '\r\n'
         // calculate the savings per cup
         const savings_per_cup = (sb_price - 0.20).toFixed(2);
-        p2.textContent += '$' + savings_per_cup + ' Savings per Cup \r\n'
+        p2.textContent += 'Having your coffee at home would save you $' + savings_per_cup + ' per cup! \r\n'
         const daily_savings = (3*savings_per_cup).toFixed(2)
-        p2.textContent += '$' + savings_per_cup + ' per Cup X 3 = ' + daily_savings + ' per Day \r\n'
-        p2.textContent += 'Invest ' + daily_savings + ' per Day Over 55 Years at 7% Return \r\n'
+        p2.textContent += '$' + savings_per_cup + ' per cup X 3 cups per day = $' + daily_savings + ' saved per day. \r\n'
+        p2.textContent += '\r\nIf you instead invested that $' + daily_savings + ' per day:\r\n'
         console.log(daily_savings)
         var total_val = addCommas(calcTotalValue(55, parseInt(daily_savings)));
-        p2.textContent += '= $' + total_val + ' VALUE\r\n'
+        p2.textContent += 'After 55 years at a %7 return you would have $' + total_val + '!\r\n'
      }
     // reset the dropdown menu attribute
     clicked = false;
