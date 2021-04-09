@@ -38,6 +38,10 @@ drinks.forEach(function(item){
         p1.textContent += 'The price of a ' + coffee + 'is $'
         p1.textContent += sb_price;
         p1.textContent += '. '
+
+        // add styling to new html conten
+        let newStyle = document.querySelector('#savings');
+        newStyle.classList.add("output");
     }
 });
 
