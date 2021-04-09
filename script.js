@@ -1,33 +1,36 @@
-document.getElementById('dropdown-options').addEventListener('click', function () {
-    /* I'd like to do access the individual options by looping, just not sure how yet, 
-    so this is just a temporary solution to get the other function to work */
-    let option = document.getElementById('latte')
-    latte.addEventListener('click', GetPrice(option));
-})
+// Select a single order, display the price
+const latte = document.getElementById('latte')
+const americano = document.getElementById('americano')
+const macchiato = document.getElementById('macchiato')
+const cappuccino = document.getElementById('cappuccino')
+const frappuccino = document.getElementById('frappuccino')
 
-/* Returns the price for the item that the user has clicked */ 
-function GetPrice (option) {
-    fetch('drinks.json')
-    .then((res) => res.json())
-    .then((data) => {
-        let drink = toString(option.innerHTML); /* currently undefined */ 
-        console.log(option.innerHTML);
-        for (drink in data)
-        {
-            let price = drink.price;
-            document.getElementById('savings').innerHTML = `<h2>Price: ${price}</h2>`;
-        }
+let drinks = [latte, americano, macchiato, cappuccino, frappuccino];
 
-    })
-    .catch((err) => console.log(err))
+const savings = document.getElementById('savings');
+let p1 = document.createElement('p')
+savings.appendChild(p1)
+
+// loop over the array of drinks 
+// if one of the drinks gets clicked
+// show the price
+drinks.forEach(function(item){
+    item.onclick = function() {
+        // clear the last requested information
+        p1.innerHTML = '';
+        p2.innerHTML = '';
+        p1.textContent = "The price of a " + item.innerHTML + " is $"
+        p1.textContent += '3.65';
+    }
+});
+
+// WIP: get the drink price from the json file
+
+// show the potentional savings
+let p2 = document.createElement('p')
+savings.appendChild(p2)
+let show = document.getElementById('button-enter');
+show.onclick = function () {
+    p2.innerHTML = '';
+    p2.textContent += 'You could have saved one million dollars!' 
 }
-        
-
-
-
-/* Returns savings based on selected menu item when user clicks */ 
-function CalculateSavings (price) {
-
-
-}
-

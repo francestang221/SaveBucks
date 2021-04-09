@@ -51,3 +51,11 @@
     height: 80%;
     width: auto;
 }
+
+#savings {
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+}
