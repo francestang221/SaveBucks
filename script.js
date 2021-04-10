@@ -116,7 +116,7 @@ document.getElementById('button-enter').onclick = function getSavings() {
                     var total_val = addCommas(calcTotalValue(55, parseInt(daily_savings)));
                     p3.textContent += 'After 55 years at a 7% return, \r\n'
                     p3.textContent += 'you would have $' + total_val + '!\r\n'
-                    document.getElementById('results').innerHTML += `<img style="margin:20px; width:500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="woah.gif" alt="Bill Nye is amazed gif"/>`;
+                    p3.innerHTML += `<img style="margin:20px; width:500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="woah.gif" alt="Bill Nye is amazed gif"/>`;
                 }           
             });
         })
