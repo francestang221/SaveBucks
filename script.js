@@ -30,11 +30,34 @@ function calcTotalValue(year, daily_invest){
     return total_value.toFixed(2);
 }
 
+
+
+
+// creating elements for outputs
+const coffee_price = document.getElementById('coffee-price');
+let p1 = document.createElement('p')
+coffee_price.appendChild(p1)
+
+const daily_cost = document.getElementById('daily-cost');
+let p2 = document.createElement('p')
+daily_cost.appendChild(p2)
+
+const savings = document.getElementById('savings');
+let p3 = document.createElement('p')
+savings.appendChild(p3)
+
+p1.setAttribute('style', 'white-space: pre;')
+p2.setAttribute('style', 'white-space: pre;')
+p3.setAttribute('style', 'white-space: pre;')
+
 // Take user input, output total savings
 
 document.getElementById('button-enter').onclick = function getSavings() {
+  
+    p1.innerHTML = '';
+    p2.innerHTML = '';
+    p3.innerHTML = '';
 
-    
     // populate coffee choice and quantity based on user input
     let selection = document.getElementById('dropdown-options');
     let coffee_choice = selection.options[selection.selectedIndex].text;
@@ -53,24 +76,6 @@ document.getElementById('button-enter').onclick = function getSavings() {
         let sb_price = 0;
         let coffee_name = "";
 
-        // creating elements for outputs
-        const coffee_price = document.getElementById('coffee-price');
-        let p1 = document.createElement('p')
-        coffee_price.appendChild(p1)
-
-        const daily_cost = document.getElementById('daily-cost');
-        let p2 = document.createElement('p')
-        daily_cost.appendChild(p2)
-        
-        const savings = document.getElementById('savings');
-        let p3 = document.createElement('p')
-        savings.appendChild(p3)
-
-        //TO DO WHERE TO PUT THIS
-        p1.setAttribute('style', 'white-space: pre;')
-        p2.setAttribute('style', 'white-space: pre;')
-        p3.setAttribute('style', 'white-space: pre;')
-
         fetch('https://my-coffee-api.herokuapp.com/coffee')
         .then((res) => res.text())
         .then((data) => { 
@@ -81,9 +86,6 @@ document.getElementById('button-enter').onclick = function getSavings() {
                     coffee_name = coffees.name;
                     sb_price = coffees.price; 
                     console.log(sb_price);
-
-                    p1.innerHTML = '';
-                    p2.innerHTML = '';
 
                     // show the requested drink's price
                     p1.textContent = 'Your go-to drink is a ' + coffee_name + '. ' + 'YUM! \r\n'
