@@ -27,11 +27,11 @@
   </nav>
   
   <div class="main-content" class="container">
-  <div class="row justify-content-center">
 
+  <div class="row justify-content-center">
     <div class="col-xl align-self-center">
     <img id="description" src="Prompt.png"  width="500" alt="Choose your go-to Starbucks drink, and see how much it is really costing you!">
-    </div>
+  </div>
     
     <div class="col-xl align-self-center">
     <div class="row justify-content-center">
@@ -49,7 +49,29 @@
         </div>
       </div>
       </div>
-      <div class="col-auto">
+
+    
+    <!-- Display the unit price of the selected drink here  -->
+    <div class="row justify-content-center">
+      <div class="col-auto" id="coffee-price">
+    </div>
+
+  <!-- Enter quantity  -->
+    <div class="col-auto">
+    <form action="" method="post" class="coffee-qty" id="myForm">
+      <label for="quantity">How many cups of coffee do you usually drink a day?</label>
+      <input type="number" name="coffee-qty" id='input-qty' required>
+      <input type="submit" value="submit" id='qty-submit'>
+    </form>
+    </div>
+
+    <!-- Display the daily cost here -->
+    <div class="row justify-content-center">
+      <div class="col-auto" id="daily-cost">
+    </div>
+
+    <!-- Show me Button -->
+    <div class="col-auto">
         <button type="button" id="button-enter" class="btn btn-lg btn-outline-*">Show me a better way!</button>
       </div>
     </div>
@@ -61,7 +83,11 @@
     </div>
   </div>
   </div>
+
   </div>
+
+
+
   
     <img id="coffee-image" src="CoffeeCup.jpg" alt="Coffee cup from above." class="rounded">
 

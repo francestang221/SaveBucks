@@ -14,9 +14,9 @@ prices.set('Macchiato', '4.35')
 prices.set('Cappuccino', '5.25')
 prices.set('Frappuccino', '5.65')
 
-const savings = document.getElementById('savings');
+const coffee_price = document.getElementById('coffee-price');
 let p1 = document.createElement('p')
-savings.appendChild(p1)
+coffee_price.appendChild(p1)
 // adding a line break each time we add text content to p2
 p1.setAttribute('style', 'white-space: pre;')
 
@@ -24,7 +24,7 @@ p1.setAttribute('style', 'white-space: pre;')
 // if one of the drinks gets clicked
 // show the price
 var clicked = false;
-sb_price = 0;
+var sb_price = 0;
 drinks.forEach(function(item){
     item.onclick = function() {
         var coffee = item.innerHTML
@@ -45,6 +45,31 @@ drinks.forEach(function(item){
     }
 });
 
+// prevent the page from refreshing after form submission
+var form = document.getElementById("myForm");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+
+
+// After the user enter the quantity, display the daily cost of their coffee habit
+const daily_cost = document.getElementById('daily-cost');
+let p2 = document.createElement('p')
+daily_cost.appendChild(p2)
+var qty = 0
+// adding a line break each time we add text content to p2
+p1.setAttribute('style', 'white-space: pre;')
+
+let btn_qty = document.getElementById('qty-submit');
+btn_qty.onclick = function() {
+    if (clicked == false) {
+        alert('please choose a drink first')
+    };
+
+    qty = document.getElementById('input-qty').value;
+    var daily_cost = sb_price * qty;
+    p2.textContent = 'Your coffee habit is costing you $' + daily_cost + ' per day! \r\n'
+}
+
 
 // calculate compound interest 
 function calcTotalValue(year, daily_invest){
@@ -60,12 +85,12 @@ function calcTotalValue(year, daily_invest){
 }
 
 // show the potentional savings
-
-let p2 = document.createElement('p')
-savings.appendChild(p2)
+const savings = document.getElementById('savings');
+let p3 = document.createElement('p')
+savings.appendChild(p3)
 
 // adding a line break each time we add text content to p2
-p2.setAttribute('style', 'white-space: pre;')
+p3.setAttribute('style', 'white-space: pre;')
 let show = document.getElementById('button-enter');
 
 // when the user clicks on the "Show me" button
@@ -77,25 +102,23 @@ show.onclick = function () {
         location.reload();
     } 
     else {
-        p2.innerHTML = '';
-        p2.textContent += 'If you make coffee at home instead: \r\n'
-        p2.textContent += 'Ground Coffee: $12 / 80 cups \r\n'
-        p2.textContent += 'Filters: $0.02 \r\n'
-        p2.textContent += 'Creamer: $0.03 \r\n'
-        p2.textContent += 'Total= $0.20 per cup \r\n'
-        p2.textContent += '\r\n'
+        p3.innerHTML = '';
+        p3.textContent += 'If you make coffee at home instead: \r\n'
+        p3.textContent += 'Ground Coffee: $12 / 80 cups \r\n'
+        p3.textContent += 'Filters: $0.02 \r\n'
+        p3.textContent += 'Creamer: $0.03 \r\n'
+        p3.textContent += 'Total= $0.20 per cup \r\n'
+        p3.textContent += '\r\n'
         // calculate the savings per cup
         const savings_per_cup = (sb_price - 0.20).toFixed(2);
-        p2.textContent += 'Having your coffee at home would save you $' + savings_per_cup + ' per cup! \r\n'
-        const daily_savings = (3*savings_per_cup).toFixed(2)
-        p2.textContent += '$' + savings_per_cup + ' per cup X 3 cups per day = $' + daily_savings + ' saved per day. \r\n'
-        p2.textContent += '\r\nIf you instead invested that $' + daily_savings + ' per day:\r\n'
+        p3.textContent += 'Having your coffee at home would save you $' + savings_per_cup + ' per cup! \r\n'
+        const daily_savings = (qty*savings_per_cup).toFixed(2)
+        p3.textContent += '$' + savings_per_cup + ' per cup X ' + qty + ' cups per day = $' + daily_savings + ' saved per day. \r\n'
+        p3.textContent += '\r\nIf you instead invested that $' + daily_savings + ' per day:\r\n'
         var total_val = addCommas(calcTotalValue(55, parseInt(daily_savings)));
-        p2.textContent += 'After 55 years at a 7% return, \r\n'
-        p2.textContent += 'you would have $' + total_val + '!\r\n'
+        p3.textContent += 'After 55 years at a 7% return, \r\n'
+        p3.textContent += 'you would have $' + total_val + '!\r\n'
      }
-    // reset the dropdown menu attribute
-    clicked = false;
 }
 
 // format number 
