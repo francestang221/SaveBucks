@@ -37,15 +37,10 @@
     <div class="row justify-content-center">
       <div class="col-auto">
       <div class="btn-group"  class="dropdown">
-        <button type="button" id="button-dropdown" class="btn btn-lg btn-outline-* dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select Order
-        </button>
-        <div id="dropdown-options" class="dropdown-menu dropdown-menu-right">
-          <button id="latte" class="dropdown-item" type="button">Latte</button>
-          <button id="americano" class="dropdown-item" type="button">Americano</button>
-          <button id="macchiato" class="dropdown-item" type="button">Macchiato</button>
-          <button id="cappuccino" class="dropdown-item" type="button">Cappuccino</button>
-          <button id="frappuccino" class="dropdown-item" type="button">Frappuccino</button>
+        <select class="form-select" id="dropdown-options">
+          <option selected>Choose your coffee order</option>
+        </select>
+        <div class="dropdown-menu dropdown-menu-right">
         </div>
       </div>
       </div>
@@ -58,11 +53,8 @@
 
   <!-- Enter quantity  -->
     <div class="col-auto">
-    <form action="" method="post" class="coffee-qty" id="myForm">
-      <label for="quantity">How many cups of coffee do you usually drink a day?</label>
+      <label for="quantity">Enter your typical cups of coffee per day:</label>
       <input type="number" name="coffee-qty" id='input-qty' required>
-      <input type="submit" value="submit" id='qty-submit'>
-    </form>
     </div>
 
     <!-- Display the daily cost here -->
@@ -72,7 +64,7 @@
 
     <!-- Show me Button -->
     <div class="col-auto">
-        <button type="button" id="button-enter" class="btn btn-lg btn-outline-*">Show me a better way!</button>
+        <button type="button" id="button-enter" class="btn btn-lg btn-outline-*">Click here to see your savings potential!</button>
       </div>
     </div>
 
@@ -86,9 +78,6 @@
 
   </div>
 
-
-
-  
     <img id="coffee-image" src="CoffeeCup.jpg" alt="Coffee cup from above." class="rounded">
 
     <footer>
