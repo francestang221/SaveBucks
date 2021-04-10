@@ -60,11 +60,15 @@ function calcTotalValue(year, daily_invest){
 }
 
 // show the potentional savings
+
 let p2 = document.createElement('p')
 savings.appendChild(p2)
+
 // adding a line break each time we add text content to p2
 p2.setAttribute('style', 'white-space: pre;')
 let show = document.getElementById('button-enter');
+
+// when the user clicks on the "Show me" button
 show.onclick = function () {
     if (clicked == false) {
         // erase the last requested information
@@ -78,9 +82,7 @@ show.onclick = function () {
         p2.textContent += 'Ground Coffee: $12 / 80 cups \r\n'
         p2.textContent += 'Filters: $0.02 \r\n'
         p2.textContent += 'Creamer: $0.03 \r\n'
-        p2.textContent += 'Total= $10.00 / 50 cups \r\n'
-        p2.textContent += '= $0.20 per cup \r\n'
-
+        p2.textContent += 'Total= $0.20 per cup \r\n'
         p2.textContent += '\r\n'
         // calculate the savings per cup
         const savings_per_cup = (sb_price - 0.20).toFixed(2);
@@ -88,9 +90,9 @@ show.onclick = function () {
         const daily_savings = (3*savings_per_cup).toFixed(2)
         p2.textContent += '$' + savings_per_cup + ' per cup X 3 cups per day = $' + daily_savings + ' saved per day. \r\n'
         p2.textContent += '\r\nIf you instead invested that $' + daily_savings + ' per day:\r\n'
-        console.log(daily_savings)
         var total_val = addCommas(calcTotalValue(55, parseInt(daily_savings)));
-        p2.textContent += 'After 55 years at a 7% return you would have $' + total_val + '!\r\n'
+        p2.textContent += 'After 55 years at a 7% return, \r\n'
+        p2.textContent += 'you would have $' + total_val + '!\r\n'
      }
     // reset the dropdown menu attribute
     clicked = false;
