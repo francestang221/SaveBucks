@@ -1,3 +1,5 @@
+// TESTING
+
 // Select a single order, display the price
 const latte = document.getElementById('latte')
 const americano = document.getElementById('americano')
@@ -56,6 +58,7 @@ const daily_cost = document.getElementById('daily-cost');
 let p2 = document.createElement('p')
 daily_cost.appendChild(p2)
 var qty = 0
+
 // adding a line break each time we add text content to p2
 p1.setAttribute('style', 'white-space: pre;')
 
