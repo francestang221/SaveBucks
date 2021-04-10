@@ -35,7 +35,7 @@ drinks.forEach(function(item){
         // show the requested drink's price
         sb_price = prices.get(coffee);
         p1.textContent = 'Your go-to drink is a ' + coffee + '. ' + 'YUM! \r\n'
-        p1.textContent += 'The price of a ' + coffee + ' is ~$'
+        p1.textContent += 'The price of a ' + coffee + ' is $'
         p1.textContent += sb_price;
         p1.textContent += '. '
 
@@ -90,7 +90,7 @@ show.onclick = function () {
         p2.textContent += '\r\nIf you instead invested that $' + daily_savings + ' per day:\r\n'
         console.log(daily_savings)
         var total_val = addCommas(calcTotalValue(55, parseInt(daily_savings)));
-        p2.textContent += 'After 55 years at a %7 return you would have $' + total_val + '!\r\n'
+        p2.textContent += 'After 55 years at a 7% return you would have $' + total_val + '!\r\n'
      }
     // reset the dropdown menu attribute
     clicked = false;
