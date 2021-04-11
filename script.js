@@ -75,15 +75,28 @@ document.getElementById('button-enter').onclick = function getSavings() {
     let qty = 0;
     qty = document.getElementById('input-qty').value;
 
+    // if coffee amount is more than 10, prompt a friendly warning message
+    if (qty > 10) { 
+        alert('That\'s a lot of coffee.');
+    }
+
     // if coffee or amount empty, re-prompt user to choose drink first ---set placeholder and then value == 0 for this to work
-    if (coffee_choice == "Choose your coffee order" || qty == 0) { 
+    if (coffee_choice == "Choose your coffee") { 
         // erase the last requested information
         savings.innerHTML = '';
-        alert('Please choose a drink & quantity first. ');
+        alert('Please choose a drink first. ');
         location.reload();
     }
 
+    // if coffee amount is zero or negative, prompt the user to enter a valid number
+    else if (qty < 0 || qty == null) { 
+        // erase the last requested information
+        savings.innerHTML = '';
+        alert('Please enter a positive integer.');
+        location.reload();
+    }
     else {
+  
         let sb_price = 0;
         let coffee_name = "";
 

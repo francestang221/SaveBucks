@@ -95,6 +95,11 @@
 
 #twitter-button {
 	margin-top: 4em;
+	text-align: center;
+}
+
+#twitter-share-button {
+	width: 100px;
 }
 
 .image-source {
