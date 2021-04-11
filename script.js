@@ -108,7 +108,7 @@ document.getElementById('button-enter').onclick = function getSavings() {
             coffees.forEach(function(coffees) {
                 if (coffees.name == coffee_choice) {
                     coffee_name = coffees.name;
-                    sb_price = coffees.price; 
+                    sb_price = coffees.price.toFixed(2); 
                     console.log(sb_price);
 
                     // show the requested drink's prices
