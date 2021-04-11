@@ -89,10 +89,10 @@ document.getElementById('button-enter').onclick = function getSavings() {
     }
 
     // if coffee amount is zero or negative, prompt the user to enter a valid number
-    else if (qty < 0 || qty == null) { 
+    else if (qty < 0 || qty == '') { 
         // erase the last requested information
         savings.innerHTML = '';
-        alert('Please enter a positive integer.');
+        alert('Please enter a positive number.');
         location.reload();
     }
     else {
