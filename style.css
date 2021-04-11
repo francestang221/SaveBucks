@@ -19,7 +19,7 @@
 
 #coffee-image {
 	width: 20em;
-	margin-bottom: 3em;
+	margin-bottom: 3.5em;
 	margin-top: 1em;
 	margin-left: auto;
 	margin-right: auto;
@@ -64,7 +64,7 @@
 #input-qty {
 	background-color: #f4f3f1;
 	height: 2.5em;
-	max-width: 3em;
+	max-width: 5em;
 	color: #1f3a32;
 	border-style: solid;
 	border-width: .05em;
