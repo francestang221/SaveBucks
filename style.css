@@ -4,109 +4,148 @@
 }
 
 #button-enter {
-	height: 50px;
-	margin: 50px;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	color: #1f3a32;
 	border-style: solid;
-	border-width: 2px;
+	border-width: .05em;
 	border-color: #1f3a32;
-	border-radius: 25px;
+	border-radius: 2.5em;
 	background-color: #f4f3f1;
+	max-width: 20em;
+	max-height: auto;
+	min-height: 2.5em;
 }
 
 #coffee-image {
-	width: 50%;
-	margin-bottom: 40px;
-	margin-top: 20px;
+	max-width: 20%;
+	margin-bottom: 3em;
+	margin-top: 1em;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 }
 
 #daily-cost {
-	font-size: x-large;
+	font-size: 2em;
 }
 
 #description {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	width: 100%;
+	max-width: 500px;
+	max-height: auto;
 }
 
 #dropdown-options {
-	height: 50px;
-	max-width: 700px;
-	margin: 50px;
-	align-items: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	color: #1f3a32;
 	border-style: solid;
-	border-width: 2px;
+	border-width: .05em;
 	border-color: #1f3a32;
-	border-radius: 25px;
+	border-radius: 2.5em;
 	background-color: #f4f3f1;
+	max-width: 20em;
+	min-height: 2.5em;
+	max-height: auto;
 }
 
 #header {
 	background-color: white !important;
-	margin-bottom: 25px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: .75em;
+	padding-bottom: 1em;
 }
 
 #input-qty {
 	background-color: #f4f3f1;
-	height: 50px;
-	width: 100px;
+	height: 2.5em;
+	max-width: 3em;
 	color: #1f3a32;
 	border-style: solid;
-	border-width: 2px;
+	border-width: .05em;
 	border-color: #1f3a32;
-	border-radius: 25px;
-	text-indent: 10%;
+	border-radius: 2.5em;
 	font-size: 1.25em;
 	text-align: center;
 }
 
 #label {
 	font-size: 1.25em;
-}
-
-#title {
-	height: 50%;
-	width: 50%;
-	margin-left: 15%;
+	width: auto;
 }
 
 #savings {
 	font-size: large;
+	word-wrap: normal;
+}
+
+#title {
+	max-width: 85%;
+	width: auto;
+	margin-left: 2em;
+	padding-right: 2em;
+	margin-right: 0em;
+	display: block;
+}
+
+#twitter-button {
+	margin-top: 4em;
+}
+
+.image-source {
+	font-size: .5em !important;
+	text-align: center;
+}
+
+.main-content {
+	background-color: #d4e9e2;
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+.navbar {
+	box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, .5);
+	height: 6em;
+	padding: 3em;
 }
 
 .output {
 	text-align: center;
 	color: #f4f3f1;
-	padding: 30px;
-	border-radius: 25px;
+	padding: 3em;
+	border-radius: 1em;
 	background-color: #1f3a32;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	width: fit-content;
-	display: block;
+	width: 40em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
 }
 
-.main-content {
-	background-color: #d4e9e2;
-	padding-bottom: 25px;
-	padding-top: 25px;
+a:link {
+	text-decoration: none;
+	color: #1f3a32;
+  }
+  
+a:visited {
+	text-decoration: none;
+	color: #1f3a32;
 }
-
-.navbar {
-	box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, .5);
-	height: 100px;
+  
+a:hover {
+	text-decoration: none;
+	color: #1f3a32;
+}
+  
+a:active {
+	text-decoration: none;
+	color: #1f3a32;
 }
 
 p {
