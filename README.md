@@ -1,6 +1,9 @@
 # SaveBucks
 BeaverHacks Spring 2021 Hackathon Project
 
+Try it here: https://francestang221.github.io/SaveBucks/ 
+(It might take a few seconds for the dropdown menu to be populated)
+
 ### Inspiration
 
 This project was inspired by a popular debate in the personal finance world about whether or not people should enjoy small splurges like Starbucks coffee. Some financial advisors, for example, Ramit Sethi says it is completely unnecessary and people should focus on how much they can grow their income instead of how much they can cut their expenses. On the other hand, some experts, such as the "Shark Tank" investor Kevin O'Leary, advises people to never pay $2.50 for a cup of coffee. He argues that people should instead make coffee at home for 20 cents per cup and invest the difference. We appreciate that it is easy to get bogged down financially with seemingly inconsequential purchases. With that in mind, we hope that this website will encourage the user to examine not just their coffee-buying habits, but also other daily purchases, subscriptions, etc., and see how they can really start making progress towards larger financial goals.
