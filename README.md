@@ -1,9 +1,8 @@
 # SaveBucks
 BeaverHacks Spring 2021 Hackathon Project
 
-Try it here: https://francestang221.github.io/SaveBucks/ 
+Try it here: https://savebucksproject.herokuapp.com/
 
-  (It might take a few seconds for the dropdown menu to be populated)
 
 ### Inspiration
 
