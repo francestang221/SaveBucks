@@ -3,6 +3,8 @@ BeaverHacks Spring 2021 Hackathon Project
 
 Try it here: https://savebucksproject.herokuapp.com/
 
+![Alt Text](http://g.recordit.co/h6rU6VQ83Q.gif)
+
 
 ### Inspiration
 
